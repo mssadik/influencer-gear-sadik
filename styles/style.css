@@ -14,8 +14,11 @@ body{
 
 }
 .container{
-    max-width: 90%;
+    max-width: 1140px;
     margin: 0 auto;
+}
+.responsive-img{
+    width: 100%;
 }
 
 
@@ -24,8 +27,12 @@ body{
 --------------------------*/
 
 /* navbar start here  */
+
 .navbar{
     display: none;
+}
+.header{
+    margin-bottom: 120px;
 }
 .nav{
     display: flex;
@@ -95,8 +102,77 @@ body{
     padding: 15px;
 }
 /* banner end here */
+
 /*------------------------
  header style end here 
+--------------------------*/
+
+
+/*------------------------
+ main style start here 
+--------------------------*/
+/* brand  */
+.brands{
+    display:flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #f3ecec;
+    border-bottom: 1px solid #f3ecec; 
+}
+.brands img{
+    max-width: 120px;
+    margin: auto;
+}
+
+/* cards  */
+.popular-collection{
+    /* margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 120px;
+    margin-top: 100px; */
+    margin: 100px 200px 120px 200px;
+}
+.popular-collection-title{
+    text-align: center;
+    margin-bottom: 50px;
+    color: #3f3c3c;
+}
+.popular-cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+.popular-card{
+    width: 320px;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+}
+.popular-card img{
+    max-width: 300px;
+}
+.card-title{
+    font-size: 1.5rem;
+}
+.card-price{
+    color:#343333;
+}
+.card-reting{
+    color:orange;
+    font-size: 0.8rem;
+}
+.card-para{
+    color:#535050;
+}
+/*------------------------
+ main style end here 
 --------------------------*/
 
 
@@ -104,14 +180,33 @@ body{
  media quary style start here
 --------------------------*/
 @media (max-width: 1200px) {
+    /* banner  */
+    .container{
+        max-width: 1140px ;
+        margin: auto;
+    }
     .banner-left-title{
         font-size: 1.5rem;
         line-height: 35px;
     }
+
+    /* brand  */
+    .brands{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        align-items: center;
+        margin-left: 100px;
+    }
+    
+    
+    
 }
 @media (max-width: 1024px) {
     /* header  */
-    
+    .container{
+        max-width: 940;
+    }
     .nav-title{
         font-weight: bold;
         font-size: 15px;
@@ -127,9 +222,31 @@ body{
     .banner-right img{
         width: 100%;
     }
+
+    
+
+    .popular-cards{
+        grid-template-columns: repeat(2, 1fr);
+        text-align: center;  
+    }
+    .hide{
+        display: none;
+    }
+
+
+    /* brand  */
+    
+    .brands img{
+        width: 100px;
+    }
+    
 }
 @media (max-width: 768px) {
     /* header  */
+    .container{
+        max-width: 540px;
+        margin: auto;
+    }
     .navbar{
         display: block;
     }
@@ -140,6 +257,7 @@ body{
     .banner{
         flex-direction: column-reverse;
         justify-content: center;
+        align-items: center;
         
     }
     .banner-left{
@@ -150,13 +268,41 @@ body{
         line-height: 30px;
         margin-bottom: 10px;
     }
+    /* brands  */
+    .brands{
+        margin-left: 35px;
+    }
+
+    /* cards  */
+    .popular-cards{
+        grid-template-columns: repeat(1, 1fr);
+        text-align: center;  
+    }
+    .popular-collection-title{
+        text-align: center;
+    }
+    .hide{
+        display: block;
+    }
     
 }
 @media (max-width: 568px) {
     /* header */
+    .container{
+        max-width: 450px;
+        margin: auto;
+    }
     .banner-left{
         text-align: center;
         word-spacing: 2px;
+    }
+    .brands{
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: 40px;
+    }
+    .popular-collection-title{
+        font-size: 1.5rem;
+        text-align: center;
     }
 }
 /*------------------------
